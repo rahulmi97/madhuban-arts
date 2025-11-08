@@ -1,0 +1,21 @@
+frontend/
+├── app/
+│   ├── core/                  # Initialization, API clients, config, auth
+│   ├── shared/                # Design system, UI components, utilities
+│   ├── features/              # Product features (Search, Profile, Dashboard)
+│   │   ├── search/
+│   │   ├── profile/
+│   │   └── dashboard/
+│   ├── state/                 # Global state management (Redux, Signals, NgRx)
+│   ├── routing/               # Route definitions, guards, lazy-loading logic
+│   ├── layout/                # Header, footer, sidebar, shell
+│   ├── assets/                # Static assets, icons, logos
+│   ├── i18n/                  # Localization
+│   └── index.tsx / main.ts    # App entry point
+├── config/
+│   ├── environments/
+│   ├── build/
+│   └── ci/
+├── libs/                      # Internal shared libraries (monorepo style)
+├── tests/                     # Unit, e2e, and performance tests
+└── tools/                     # CLI scripts, generators, automation

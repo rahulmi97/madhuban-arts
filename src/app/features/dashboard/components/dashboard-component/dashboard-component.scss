@@ -1,0 +1,88 @@
+.main-container {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // margin: 20px 10px;
+        background: beige;
+        padding: 20px;
+        // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        // border-radius: 20px;
+        // width: 100%;
+    
+        // optional: make it look elevated
+        // transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+        // &:hover {
+        //     transform: translateY(-4px);
+        //     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        // }
+        .heading{
+            height: 60px;
+            font-weight: bold;
+            font-size: 25px;
+            font-family: cursive;
+        }
+    
+        .detail-container{
+            display: flex;
+            justify-content: space-between;
+    
+            .img{
+                flex: 1;
+                margin-right: 20px;
+                height: 300px;
+                img{
+                    border-radius: 10px;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            .description{
+                flex: 3;
+            }
+        }
+    }
+
+    .intro-section{
+        background: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+
+        
+        .desc-img{
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+            margin: auto;
+            .left-content {
+                display: flex;
+                flex-direction: column;
+                .heading {
+                    font-size: large;
+                    font-family: cursive;
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+            }
+            .img {
+                // flex: 1;
+                img{
+                    height: 100%;
+                    width: 100%;
+                    border: 2px solid lightgray;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+}
