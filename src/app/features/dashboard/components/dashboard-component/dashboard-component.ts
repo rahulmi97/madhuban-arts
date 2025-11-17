@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { ExpertiesComponent } from '../experties-component/experties-component';
 
 @Component({
   selector: 'app-dashboard-component',
-  imports: [],
+  imports: [ExpertiesComponent],
   templateUrl: './dashboard-component.html',
   styleUrl: './dashboard-component.scss'
 })
