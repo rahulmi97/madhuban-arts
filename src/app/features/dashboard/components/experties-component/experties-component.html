@@ -2,11 +2,20 @@
     <div class="heading">We Do These Artworks</div>
     <div class="description">We can create all kinds of wall art as per our customers’ demand, such as wall painting, graffiti, 3D wall painting, mural painting, Doodle art, Relief and sculpture, etc. Our team consists of the best artists of Gurugram and Delhi NCR. Nowadays, not everyone likes ordinary artwork. Everyone wants some creative and different designs and artworks for themselves, which we have the full ability to fulfill.</div>
 
-    <div class="carousal">
-        @for(item of experties){
-            <div class="card">
+    <div class="card carousel">
+      <p-carousel [value]="experties" [showIndicators]="false" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="3000">
+        <ng-template let-experty #item>
+            <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
+                <div class="mb-4 font-medium">{{ experty.label }}</div>
+                <div class="mb-4">
+                    <div class="relative mx-auto">
+                        <img [src]="experty.img" [alt]="experty.label" class="w-full rounded-border" />
+                    </div>
+                </div>
+                <div class="mb-4 font-medium">{{ experty.description }}</div>
                 
             </div>
-        }
-    </div>
+        </ng-template>
+    </p-carousel>
+</div>
 </div>

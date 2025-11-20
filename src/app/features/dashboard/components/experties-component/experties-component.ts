@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+import { CarouselModule } from 'primeng/carousel';
 @Component({
   selector: 'app-experties-component',
-  imports: [],
+  imports: [CardModule, ButtonModule, CarouselModule],
   templateUrl: './experties-component.html',
   styleUrl: './experties-component.scss'
 })
 export class ExpertiesComponent {
 
-  experties: {label: String, img: String, description: String}[] = [
+  experties: {label: String, img: String, description: String}[] =  [
     {
       label: 'Wall painting',
       img: 'assets/images/profile-img.jpeg',
