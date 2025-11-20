@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .heading{
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .description{
+        color: grey;
+        margin-top: 10px;
+    }
+    .carousel{
+        margin-top: 20px;
+
+        img{
+            height: 400px;
+            width: 100%;
+            object-fit: contain
+        };
+    }
+}
