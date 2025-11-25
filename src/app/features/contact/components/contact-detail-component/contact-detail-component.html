@@ -1,1 +1,74 @@
-<p>contact-detail-component works!</p>
+<div class="container">
+  <div class="detail-container">
+    <h1>Contact Me</h1>
+    <p>
+      Get in touch with Madhuban Arts for custom wall paintings, murals, and creative artwork. Share
+      your idea with us, and we’ll help bring it to life with beautiful, handcrafted designs
+    </p>
+
+    @for(data of detailData; track $index){
+    <ng-container
+      [ngTemplateOutlet]="detailList"
+      [ngTemplateOutletContext]="{ data: data, index: $index + 1, total: detailData.length }"
+    >
+    </ng-container>
+    }
+
+    <div class="social-media">
+      <div class="label">Follow Me</div>
+      <div class="icons">
+        <i class="pi pi-instagram"></i>
+        <i class="pi pi-facebook"></i>
+        <i class="pi pi-youtube"></i>
+        <i class="pi pi-twitter"></i>
+      </div>
+    </div>
+  </div>
+  <div class="form-container">
+    <h1>Send a message</h1>
+    <div>
+      <p-floatlabel variant="on">
+        <input pInputText id="on_label" autocomplete="off" />
+        <label for="on_label">First Name</label>
+      </p-floatlabel>
+      <p-floatlabel variant="on">
+        <input pInputText id="on_label" autocomplete="off" />
+        <label for="on_label">Last Name</label>
+      </p-floatlabel>
+      <p-floatlabel variant="on">
+        <input pInputText id="on_label" autocomplete="off" />
+        <label for="on_label">Email</label>
+      </p-floatlabel>
+      <p-floatlabel variant="on">
+        <input pInputText id="on_label" autocomplete="off" />
+        <label for="on_label">Subject</label>
+      </p-floatlabel>
+
+      <p-floatlabel variant="on">
+        <textarea
+          pTextarea
+          id="over_label"
+          rows="5"
+          cols="30"
+          style="resize: none"
+          class="h-full"
+        ></textarea>
+        <label for="on_label">Message</label>
+      </p-floatlabel>
+
+      <p-button label="Submit" [raised]="true" severity="secondary" />
+    </div>
+  </div>
+</div>
+
+<div class="quote">“Art is not what you see, but what you make others see.”</div>
+
+<ng-template #detailList let-data="data" let-index="index" let-total="total">
+  <div class="contact-details" [class.remove-border]="index === total">
+    <div class="text-w-icon">
+      <div class="icon"><span class="pi pi-map-marker"></span></div>
+      <div class="label">{{ data.label }}</div>
+    </div>
+    <div class="desc">{{ data.description }}</div>
+  </div>
+</ng-template>
