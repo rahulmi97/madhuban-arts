@@ -6,13 +6,13 @@
       <p-carousel [value]="experties" [showIndicators]="false" [numVisible]="1" [numScroll]="1" [circular]="true" autoplayInterval="3000">
         <ng-template let-experty #item>
             <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
-                <div class="mb-4 font-medium">{{ experty.label }}</div>
+                <div class="mb-4 experty-label">{{ experty.label }}</div>
                 <div class="mb-4">
                     <div class="relative mx-auto">
                         <img [src]="experty.img" [alt]="experty.label" class="w-full rounded-border" />
                     </div>
                 </div>
-                <div class="mb-4 font-medium">{{ experty.description }}</div>
+                <div class="mb-4 experty-desc">{{ experty.description }}</div>
                 
             </div>
         </ng-template>
